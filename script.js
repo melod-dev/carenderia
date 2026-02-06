@@ -5,7 +5,7 @@ const msg = document.getElementById("msg");
 form.addEventListener("submit", e => {
   e.preventDefault();
 
-  // Get checked checkboxes within the form
+  // Get all checked menu items
   const checked = form.querySelectorAll("input[type='checkbox']:checked");
 
   if (checked.length === 0) {
@@ -13,15 +13,17 @@ form.addEventListener("submit", e => {
     return;
   }
 
-  // Combine checked values
+  // Combine checked values into the hidden field
   let orders = [];
   checked.forEach(item => orders.push(item.value));
   orderField.value = orders.join(", ");
 
-  // Submit to Google Form
+  // Submit form normally to Google Forms
   form.submit();
 
-  // Confirmation message
+  // Show confirmation message
   msg.textContent = "✅ Order received! Thank you.";
-});
 
+  // Reset the form after submission
+  form.reset();
+});
