@@ -55,12 +55,12 @@
 
 <h2>🍽️ Carinderia Menu</h2>
 
-<form id="orderForm">
-
+<form id="orderForm" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_self">
+  
   <!-- CUSTOMER NAME -->
   <input
     type="text"
-    name="entry.123456789"  <!-- REPLACE WITH YOUR GOOGLE FORM NAME FIELD ENTRY ID -->
+    name="entry.123456789"  <!-- REPLACE with your Google Form Name field ID -->
     placeholder="Your Name"
     required
   >
@@ -91,13 +91,14 @@
   </div>
 
   <!-- HIDDEN ORDER FIELD -->
-  <input type="hidden" name="entry.987654321" id="orderField"> <!-- REPLACE WITH YOUR GOOGLE FORM ORDER FIELD ENTRY ID -->
+  <input type="hidden" name="entry.987654321" id="orderField"> <!-- REPLACE with your Google Form Order field ID -->
 
   <button type="submit">Submit Order</button>
 </form>
 
 <p id="msg"></p>
 
+<!-- LINK EXTERNAL SCRIPT -->
 <script src="script.js"></script>
 
 </body>
