@@ -14,8 +14,7 @@ form.addEventListener("submit", e => {
   }
 
   // Combine checked values into the hidden field
-  let orders = [];
-  checked.forEach(item => orders.push(item.value));
+  const orders = Array.from(checked).map(item => item.value);
   orderField.value = orders.join(", ");
 
   // Submit form normally to Google Forms
