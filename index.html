@@ -25,10 +25,29 @@
       object-fit: cover;
       border-radius: 6px;
     }
-    button {
+    label {
+      display: block;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    input[type="text"], button {
       width: 100%;
       padding: 12px;
       font-size: 16px;
+      margin-bottom: 15px;
+    }
+    button {
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    #msg {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #28a745;
     }
   </style>
 </head>
@@ -40,15 +59,15 @@
 
   <!-- CUSTOMER NAME -->
   <input
-    name="entry.123456789"  <!-- REPLACE WITH YOUR NAME FIELD ENTRY -->
+    type="text"
+    name="entry.123456789"  <!-- REPLACE WITH YOUR GOOGLE FORM NAME FIELD ENTRY ID -->
     placeholder="Your Name"
     required
-    style="width:100%;padding:10px;margin-bottom:15px;"
   >
 
   <!-- MENU ITEMS -->
   <div class="menu-item">
-    <img src="https://via.placeholder.com/400x200?text=Chicken+Adobo">
+    <img src="https://via.placeholder.com/400x200?text=Chicken+Adobo" alt="Chicken Adobo">
     <label>
       <input type="checkbox" value="Chicken Adobo – ₱70">
       Chicken Adobo – ₱70
@@ -56,7 +75,7 @@
   </div>
 
   <div class="menu-item">
-    <img src="https://via.placeholder.com/400x200?text=Pork+Menudo">
+    <img src="https://via.placeholder.com/400x200?text=Pork+Menudo" alt="Pork Menudo">
     <label>
       <input type="checkbox" value="Pork Menudo – ₱70">
       Pork Menudo – ₱70
@@ -64,7 +83,7 @@
   </div>
 
   <div class="menu-item">
-    <img src="https://via.placeholder.com/400x200?text=Sinigang">
+    <img src="https://via.placeholder.com/400x200?text=Sinigang" alt="Sinigang na Baboy">
     <label>
       <input type="checkbox" value="Sinigang na Baboy – ₱80">
       Sinigang na Baboy – ₱80
@@ -72,7 +91,7 @@
   </div>
 
   <!-- HIDDEN ORDER FIELD -->
-  <input type="hidden" name="entry.987654321" id="orderField"> <!-- REPLACE WITH ORDER FIELD ENTRY -->
+  <input type="hidden" name="entry.987654321" id="orderField"> <!-- REPLACE WITH YOUR GOOGLE FORM ORDER FIELD ENTRY ID -->
 
   <button type="submit">Submit Order</button>
 </form>
@@ -80,5 +99,6 @@
 <p id="msg"></p>
 
 <script src="script.js"></script>
+
 </body>
 </html>
