@@ -17,8 +17,7 @@ form.addEventListener("submit", e => {
   const orders = Array.from(checked).map(item => item.value);
   orderField.value = orders.join(", ");
 
-  // Submit form normally to Google Forms
-  form.submit();
+
 
   // Show confirmation message
   msg.textContent = "✅ Order received! Thank you.";
@@ -26,3 +25,4 @@ form.addEventListener("submit", e => {
   // Reset the form after submission
   form.reset();
 });
+
