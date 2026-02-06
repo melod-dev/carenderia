@@ -19,15 +19,9 @@ form.addEventListener("submit", e => {
   orderField.value = orders.join(", ");
 
   // Submit to Google Form
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSf0AJ6psAwQbB9L_irGQBHH5U6Esx5v8Tzx7L-SQqvCf3JUAQ/formResponse", {  // <-- REPLACE WITH YOUR formResponse URL
-    method: "POST",
-    mode: "no-cors",
-    body: new FormData(form)
-  });
+  form.submit();
 
   // Confirmation message
   msg.textContent = "✅ Order received! Thank you.";
-
-  // Reset form
-  form.reset();
 });
+
