@@ -56,7 +56,13 @@
 <h2>🍽️ Carinderia Menu</h2>
 
 <!-- Replace action URL with your Google Form 'formResponse' URL -->
-<form id="orderForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf0AJ6psAwQbB9L_irGQBHH5U6Esx5v8Tzx7L-SQqvCf3JUAQ/formResponse" method="POST" target="_self">
+<form id="orderForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf0AJ6psAwQbB9L_irGQBHH5U6Esx5v8Tzx7L-SQqvCf3JUAQ/formResponse" 
+    method="POST" 
+    target="hidden_iframe">
+
+  </form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
   <!-- CUSTOMER NAME -->
   <input
@@ -104,3 +110,4 @@
 
 </body>
 </html>
+
